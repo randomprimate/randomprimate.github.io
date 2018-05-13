@@ -64,10 +64,4 @@ http.createServer(function (req, res) {
 }).listen(8080);  
   
 console.log('Server running on port 8080.');  
-\`\`\`   
-  
-  
-  
-\## Webpack  
-  
-source: [https://angular.io/guide/webpack](https://angular.io/guide/webpack "https://angular.io/guide/webpack") 
+\`\`\` 
