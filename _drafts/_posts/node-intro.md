@@ -1,6 +1,15 @@
 ---
 layout: post
-comments: true
+comments: false
 title: Node Intro
-date: 2018-05-13 00:00:00 +0000
+date: 2017-06-21 19:52:57 +0000
+description: 'Getting started with Nodejs.  '
+categories: []
+tags: []
+image: ''
+type: ''
+photos: []
+headline: ''
+modified: ''
+mathjax: false
 ---
