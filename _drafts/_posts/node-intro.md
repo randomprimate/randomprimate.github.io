@@ -49,7 +49,7 @@ Where `5e2abd65-4ce1-4fda-b9b7-c3cc7f04df67` is generated when launching the ses
 
 Finally we can also open a  REPL (read-eval-print-loop) where you can execute raw JavaScript code by running `node`.
 
-```
+```node
 $ node
 > const anarr = [1, 3, 5, 7]
 undefined
@@ -64,15 +64,17 @@ undefined
 
 ### Web Server
 
-    #!javascript
-    var http = require('http');
+```node
+#!javascript
+var http = require('http');
     
-    http.createServer(function (req, res) {
-      res.writeHead(200, {'Content-Type': 'text/plain'});
-      res.end('Hello World\n');
-    }).listen(8080);
+http.createServer(function (req, res) {
+	res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello World\n');
+}).listen(8080);
     
-    console.log('Server running on port 8080.');
+console.log('Server running on port 8080.');
+```
 
 ## Reference
 
