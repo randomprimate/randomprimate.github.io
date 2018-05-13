@@ -1,5 +1,6 @@
 ---
 pages:
+- _posts/node-intro.md
 - _posts/2017-07-20-next-tutorial.md
 - _posts/2017-03-15-distributing-python-packages.md
 - _posts/2017-03-12-PythonCLIApp.md
