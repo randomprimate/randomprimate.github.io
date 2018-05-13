@@ -78,6 +78,6 @@ console.log('Server running on port 8080.');
 
 ## Reference
 
-\[1\] “Node.js v10.x Documentation.” Node.js, Node.js, nodejs.org/dist/latest-v10.x/docs/api/debugger.html.
+\[1\] “Node.js v10.x Documentation.” Node.js, Node.js, nodejs.org/dist/latest-v10.x/docs/api.
 
 \[2\] Weiss, Manuel. “The Absolute Beginner's Guide to Node.js.” Codeship, Codeship, 23 Jan. 2018, blog.codeship.com/node-js-tutorial/.
