@@ -18,21 +18,22 @@ mathjax: false
 ---
 # Node.js
 
-> Node.js is just another way to execute code on your computer. It is simply a JavaScript runtime.
+Nodejs is simply a JavaScript runtime which means that it's a way to run JavaScript on whatever platform nodejs  has been installed.  
+
+A main concept with node is the `non-blocking I/O` part of the official description. This basically means that one function call will not block or be blocked by another function call. Given that JavaScript uses a single thread in its event loop we can't count on using multiple threads. Now the way it handles this is by using asynchronous callbacks, you can think of this as a callback queue and you can think of callbacks as a function that runs after another function has completed execution.
+
+Now the rest of this article will walk you through installing node, trying it out with a simple web server and lastly learn how to manage dependencies and installing packages. By the end you should have the foundation to learn any specific framework or tool based on nodejs. 
+
+bjjkglkj 
 
 ## Install
 
 **TBD**
 
-### Asynchronous Callbacks in node.js
-
-As you saw in the previous example, the typical pattern in Node.js is to use asynchronous callbacks. Basically you’re telling it to do something and when it’s done it will call your function (callback). This is because Node is single-threaded. While you’re waiting on the callback to fire, Node can go off and do other things instead of blocking until the request is finished.
-
-This is especially important for web servers. It’s pretty common in modern web applications to access databases. While you’re waiting for the database to return results Node can process more requests. This allows you to handle thousands of concurrent connections with very little overhead, compared to creating a separate thread for each connection.
 
 ## Node CLI
 
-Usage: `node [options] [v8 options] [script.js | -e "script"] [arguments]`
+Usage: `node \[options\] \[v8 options\] \[script.js | -e "script"\] \[arguments\]`
 
 To execute a js script use: `node <script-name>`
 
@@ -105,7 +106,7 @@ Global installation: `npm -g install <package-name>`
 
 To manage local packages we can use a `package.json` which allows us to list the packages our project depends on and their version.
 
-The only two requirements are `name` and `version`. 
+The only two requirements are `name` and `version`.
 
 To generate this file we can use `npm init` or `npm init -y` for the default layout within the project's directory.
 
@@ -131,6 +132,7 @@ To generate this file we can use `npm init` or `npm init -y` for the default lay
   "homepage": "https://github.com/username/package_name"
 }
 ```
+
 * name: the current directory name
 * version: always 1.0.0
 * description: info from the readme, or an empty string ""
@@ -146,7 +148,7 @@ We can also set more information through our CLI, such as `npm set init.license 
 
 ### Dependencies
 
-We can add two types of dependencies: 
+We can add two types of dependencies:
 
 * **dependencies**: Used in production.
 * **devDependencies**: Used in development and test.
@@ -167,7 +169,7 @@ or we can use the CLI:
 * **dependecies**: `npm install <package_name> --save`
 * **devDependencies**: `npm install <package_name> --save`
 
-Now to install the dependencies for a new project just run `npm install`. 
+Now to install the dependencies for a new project just run `npm install`.
 
 ## Reference
 
