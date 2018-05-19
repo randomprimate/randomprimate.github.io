@@ -1,9 +1,10 @@
 ---
 layout: post
 comments: false
-title: Node.js Intro
+title: Node.js Introduction
 date: 2017-06-21 19:52:57 +0000
-description: 'Getting started with Nodejs.  '
+description: 'Understand what Node.js is and the basic concepts behind it. Set up
+  and dependency management.  '
 categories:
 - nodejs
 tags:
@@ -12,11 +13,11 @@ tags:
 image: ''
 type: ''
 photos: []
-headline: ''
+headline: Getting started with Nodejs
 modified: ''
 mathjax: false
 ---
-# Node.js
+## Intro
 
 Nodejs is simply a JavaScript runtime which means that it's a way to run JavaScript on whatever platform nodejs has been installed.  
 
