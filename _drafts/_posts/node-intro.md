@@ -18,17 +18,25 @@ mathjax: false
 ---
 # Node.js
 
-Nodejs is simply a JavaScript runtime which means that it's a way to run JavaScript on whatever platform nodejs  has been installed.  
+Nodejs is simply a JavaScript runtime which means that it's a way to run JavaScript on whatever platform nodejs has been installed.  
 
-A main concept with node is the `non-blocking I/O` part of the official description. This basically means that one function call will not block or be blocked by another function call. Given that JavaScript uses a single thread in its event loop we can't count on using multiple threads. Now the way it handles this is by using asynchronous callbacks, you can think of this as a callback queue and you can think of callbacks as a function that runs after another function has completed execution.
+An important concept with node is the `non-blocking I/O` part of the official description. This basically means that one function call will not block or be blocked by another function call. Given that JavaScript uses a single thread in its event loop we can't count on using multiple threads. Now the way it handles this is by using asynchronous callbacks, you can think of this as a callback queue and you can think of callbacks as a function that runs after another function has completed execution.
 
-Now the rest of this article will walk you through installing node, trying it out with a simple web server and lastly learn how to manage dependencies and installing packages. By the end you should have the foundation to learn any specific framework or tool based on nodejs. 
-
-bjjkglkj 
+Now the rest of this article will walk you through installing node, trying it out with a simple web server and lastly learn how to manage dependencies and installing packages. By the end, you should have the foundation to learn any specific framework or tool based on nodejs. 
 
 ## Install
 
-**TBD**
+Node Version Manager ([NVM](https://github.com/creationix/nvm)) is the best way of having node installed in your system due to different projects using different node versions. 
+
+Install NVM:
+
+`curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash`
+
+Install node with `nvm install 8.11.2` which installs version `8.11.2`, you can later check installed versions with `nvm ls`.
+
+You can also download the latest package from the [official site](https://nodejs.org/en/download/) which has a package for Linux, Mac, and Windows. 
+
+For any hiccup during installation think about dependencies first, look up your platform's requirements. For Linux, for example, you might find [this](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04) article useful.
 
 
 ## Node CLI
@@ -43,7 +51,7 @@ You can also run the debugger with `node --inspect <script-name>`. This allows u
 
 Where `5e2abd65-4ce1-4fda-b9b7-c3cc7f04df67` is generated when launching the session.
 
-Finally we can also open a  REPL (read-eval-print-loop) where you can execute raw JavaScript code by running `node`.
+Finally, we can also open a  REPL (read-eval-print-loop) where you can execute raw JavaScript code by running `node`.
 
 ```node
 $ node
@@ -59,9 +67,9 @@ undefined
 
 ### Web Server
 
-This example is taken from the `nodejs` documentation. We are going to build a web server relying on Node's `htttp` module.
+This example is taken from the `nodejs` documentation. We are going to build a web server relying on Node's `HTTP` module.
 
-Create the following fila and run it with the node cli: `node web-server.js`
+Create the following file and run it with the node cli: `node web-server.js`
 
 ```node
 const http = require('http');
@@ -173,8 +181,16 @@ Now to install the dependencies for a new project just run `npm install`.
 
 ## Reference
 
-\[1\] “Node.js v10.x Documentation.” Node.js, Node.js, nodejs.org/dist/latest-v10.x/docs/api.
+[1] Bearnes, Brennen. “How To Install Node.js on Ubuntu 16.04 | DigitalOcean.” 5 Common Server Setups For Your Web Application | DigitalOcean, DigitalOcean, 7 Mar. 2018, www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04.
 
-\[2\] Npm, NPM, www.npmjs.com/.
+[2] Creationix. “Creationix/Nvm.” GitHub, github.com/creationix/nvm.
 
-\[3\] Weiss, Manuel. “The Absolute Beginner's Guide to Node.js.” Codeship, Codeship, 23 Jan. 2018, blog.codeship.com/node-js-tutorial/.
+[3] Morelli, Brandon. “JavaScript: What the Heck Is a Callback? – Codeburst.” Codeburst, Codeburst, 12 June 2017, codeburst.io/javascript-what-the-heck-is-a-callback-aba4da2deced.
+
+[4] “Node.js v10.x Documentation.” Node.js, Node.js, nodejs.org/dist/latest-v10.x/docs/api.
+
+[5] Npm, NPM, www.npmjs.com/.
+
+[6] Patel, Priyesh. “What Exactly Is Node.js? – FreeCodeCamp.” FreeCodeCamp, FreeCodeCamp, 18 Apr. 2018, medium.freecodecamp.org/what-exactly-is-node-js-ae36e97449f5.
+
+[7] Weiss, Manuel. “The Absolute Beginner's Guide to Node.js.” Codeship, Codeship, 23 Jan. 2018, blog.codeship.com/node-js-tutorial/.
