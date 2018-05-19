@@ -3,19 +3,14 @@ layout: post
 comments: false
 title: Node.js Introduction
 date: 2017-06-21 19:52:57 +0000
-description: 'Understand what Node.js is and the basic concepts behind it. Set up
-  and dependency management.  '
+description: 'Understand what Node.js is and the basic concepts behind it. Set up and dependency management.'
 categories:
 - nodejs
 tags:
 - nodejs
 - introduction
-image: ''
-type: ''
-photos: []
 headline: Getting started with Nodejs
 modified: ''
-mathjax: false
 ---
 ## Intro
 
@@ -23,11 +18,11 @@ Nodejs is simply a JavaScript runtime which means that it's a way to run JavaScr
 
 An important concept with node is the `non-blocking I/O` part of the official description. This basically means that one function call will not block or be blocked by another function call. Given that JavaScript uses a single thread in its event loop we can't count on using multiple threads. Now the way it handles this is by using asynchronous callbacks, you can think of this as a callback queue and you can think of callbacks as a function that runs after another function has completed execution.
 
-Now the rest of this article will walk you through installing node, trying it out with a simple web server and lastly learn how to manage dependencies and installing packages. By the end, you should have the foundation to learn any specific framework or tool based on nodejs. 
+Now the rest of this article will walk you through installing node, trying it out with a simple web server and lastly learn how to manage dependencies and installing packages. By the end, you should have the foundation to learn any specific framework or tool based on nodejs.
 
 ## Install
 
-Node Version Manager ([NVM](https://github.com/creationix/nvm)) is the best way of having node installed in your system due to different projects using different node versions. 
+Node Version Manager ([NVM](https://github.com/creationix/nvm)) is the best way of having node installed in your system due to different projects using different node versions.
 
 Install NVM:
 
@@ -35,7 +30,7 @@ Install NVM:
 
 Install node with `nvm install 8.11.2` which installs version `8.11.2`, you can later check installed versions with `nvm ls`.
 
-You can also download the latest package from the [official site](https://nodejs.org/en/download/) which has a package for Linux, Mac, and Windows. 
+You can also download the latest package from the [official site](https://nodejs.org/en/download/) which has a package for Linux, Mac, and Windows.
 
 For any hiccup during installation think about dependencies first, look up your platform's requirements. For Linux, for example, you might find [this](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04) article useful.
 
@@ -54,7 +49,7 @@ Where `5e2abd65-4ce1-4fda-b9b7-c3cc7f04df67` is generated when launching the ses
 
 Finally, we can also open a  REPL (read-eval-print-loop) where you can execute raw JavaScript code by running `node`.
 
-```node
+{% highlight bash linenos %}
 $ node
 > const anarr = [1, 3, 5, 7]
 undefined
@@ -64,7 +59,7 @@ undefined
 7
 > anarr
 [ 1, 3, 5, 7, 2, 4, 6 ]
-```
+{% endhighlight %}
 
 ### Web Server
 
@@ -72,7 +67,7 @@ This example is taken from the `nodejs` documentation. We are going to build a w
 
 Create the following file and run it with the node cli: `node web-server.js`
 
-```node
+{% highlight javascript linenos %}
 const http = require('http');
 
 const hostname = '127.0.0.1';
@@ -87,13 +82,13 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
-```
+{% endhighlight %}
 
 The result should be the following console message:
 
-```bash
+{% highlight bash linenos %}
 Server running at http://127.0.0.1:3000/
-```
+{% endhighlight %}
 
 ## Node Package Manager
 
@@ -119,7 +114,7 @@ The only two requirements are `name` and `version`.
 
 To generate this file we can use `npm init` or `npm init -y` for the default layout within the project's directory.
 
-```node
+{% highlight json linenos %}
 {
   "name": "package_name",
   "description": "",
@@ -140,7 +135,7 @@ To generate this file we can use `npm init` or `npm init -y` for the default lay
   },
   "homepage": "https://github.com/username/package_name"
 }
-```
+{% endhighlight %}
 
 * name: the current directory name
 * version: always 1.0.0
@@ -164,14 +159,14 @@ We can add two types of dependencies:
 
 To install dependencies we can either add them directly to the `package.json` file with:
 
-```node
+{% highlight json linenos %}
 "dependencies": {
     "prod_package": "^1.0.0"
   },
   "devDependencies" : {
     "dev_package": "^3.1.0"
   }
-```
+{% endhighlight %}
 
 or we can use the CLI:
 

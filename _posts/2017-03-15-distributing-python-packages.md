@@ -8,9 +8,6 @@ headline: Distribute your Python package
 modified: 2017-03-15
 category: Python
 tags: [package, distribution, python]
-image:
-comments: true
-mathjax: true
 ---
 
 ## Intro
@@ -41,7 +38,7 @@ Always version control your projects. Let's initialize this as a git project if
 you haven't done so already, create a `.gitignore` file and commit our current
 state.
 
-{% highlight python %}
+{% highlight python linenos %}
 git init
 touch .gitignore
 git add .
@@ -52,7 +49,7 @@ git commit -m "Initial state for fibocli app"
 Because we're going to publish this package we'll need to have better
 information in our setup script. Here's how it should look:
 
-{% highlight python %}
+{% highlight python linenos %}
 from setuptools import setup, find_packages
 
 setup(
@@ -85,20 +82,20 @@ Add and commit your code at least locally. We'll need git for the following step
 
 - Create an account at [Gemfury](https://manage.fury.io)
 - Add fury as remote
-{% highlight python %}
+{% highlight python linenos %}
 git remote add fury https://<username>@git.fury.io/<username>/<package-name>.git
 {% endhighlight %}
 - Push to Fury `git push fury master`. You'll need to authenticate.
 
 You can now install packages with `pip` using something like:
-{% highlight python %}
+{% highlight python linenos %}
 pip install <package-name> --extra-index-url https://pypi.fury.io/<token>/<username>/
 {% endhighlight %}
 
 **Optional:** You can also enable Gemfury as a source by adding the following line to your
 `requirements.txt`:
 
-{% highlight python %}
+{% highlight python linenos %}
 --extra-index-url https://pypi.fury.io/<token>/<username>/
 {% endhighlight %}
 
@@ -116,7 +113,7 @@ _The following steps have been taken from the official PyPI [guide](https://pack
 - Create a `.pypirc` file with `vi ~/.pypirc`
 - Add the following information to your `.pypirc` file:
 
-{% highlight python %}
+{% highlight python linenos %}
 [distutils]
 index-servers=pypi
 

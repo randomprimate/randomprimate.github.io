@@ -9,9 +9,6 @@ headline: Develop a Python CLI App
 modified: 2017-03-12                 
 category: Python
 tags: [cli, python]
-image:
-comments: true
-mathjax: true
 ---
 
 ## Intro
@@ -48,7 +45,7 @@ F_n = F_{n-1} + F_{n-2}
 What we need next is a directory for our project and within this directory
 create a `fibocli.py` file.
 
-{% highlight python %}
+{% highlight python linenos %}
 mkdir fibocli
 cd fibocli
 touch fibocli.py
@@ -57,7 +54,7 @@ touch fibocli.py
 I like using [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)
 to maintain dependencies so let's also configure an environment.
 
-{% highlight python %}
+{% highlight python linenos %}
 mkvirtualenv fibocli
 touch requirements.txt
 {% endhighlight %}  
@@ -66,7 +63,7 @@ In the `fibocli.py` paste the following code and try it out. At the function cal
 under the `__name__` block the integer parameter is the number of iterations
 that the sequence should run.
 
-{% highlight python %}
+{% highlight python linenos %}
 def fibo(num):
     """Fibonacci sequence"""
     n = int(num)
@@ -100,7 +97,7 @@ Here's a quick description from the official site:
 
 Install `Click` with `pip` and freeze update the requirements file.
 
-{% highlight python %}
+{% highlight python linenos %}
 pip install click
 pip freeze > requirements.txt
 {% endhighlight %}
@@ -108,7 +105,7 @@ pip freeze > requirements.txt
 Now in our script we need to import `click` and add some decorators. Click is
 based on declaring commands through decorators.
 
-{% highlight python %}
+{% highlight python linenos %}
 import click
 
 @click.command()
@@ -151,7 +148,7 @@ name, no need of calling python or using the script's path.
 To get started add a `setup.py` file in the same directory and include the
 following code:
 
-{% highlight python %}
+{% highlight python linenos %}
 from setuptools import setup
 
 setup(
@@ -177,14 +174,14 @@ right side is the import path followed by a colon (:) with the Click command.
 
 Let's make sure this is working as expected. All we need is to install our package.
 
-{% highlight python %}
+{% highlight python linenos %}
  pip install --editable .
 {% endhighlight %}
 
 Now let's try our application with no flags to get the prompt, later with a
 prompt and lastly with a `help` flag to view documentation.
 
-{% highlight python %}
+{% highlight python linenos %}
 fibocli
 fibocli --num=32
 fibocli --help
@@ -199,7 +196,7 @@ that group through a `add_command` method.
 To make this happen we will create a new function called cli which will be the
 group and we'll also add a hello world function to test this out.
 
-{% highlight python %}
+{% highlight python linenos %}
 @click.group()
 def cli():
     pass
@@ -219,7 +216,7 @@ cli.add_command(hello)
 Let's try this out. First we'll call the `fibocli` command to view the suggested
 format. Then we will call it again with each command we have in our application
 
-{% highlight python %}
+{% highlight python linenos %}
 # Get usage suggestion through docs
 fibocli
 # Run the fibo command
@@ -256,7 +253,7 @@ this script.
 Now let's remove the `hello()` function with it's decorator from the `fibocli`
 script and in `hello_world` we can add something like this:
 
-{% highlight python %}
+{% highlight python linenos %}
 import click
 
 
@@ -284,7 +281,7 @@ the `hello` command, it will actually take unlimited arguments thanks to the
 Before testing the script we need to import it and modify how we are adding it
 in the `fibocli` file.
 
-{% highlight python %}
+{% highlight python linenos %}
 import scripts.hello_world as hel
 ...
 # Substitute cli.add_command(hello) with:
@@ -294,7 +291,7 @@ cli.add_command(hel.hello)
 You are now ready to test the final script, don't forget to try out the multiple
 argument option for our `hello` command.
 
-{% highlight python %}
+{% highlight python linenos %}
 fibocli hello "Jane" "Joe" "John" --count=3
 {% endhighlight %}
 
