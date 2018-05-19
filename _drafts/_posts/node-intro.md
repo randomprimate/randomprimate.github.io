@@ -181,7 +181,7 @@ Now to install the dependencies for a new project just run `npm install`.
 
 ## Reference
 
-[1] Bearnes, Brennen. “How To Install Node.js on Ubuntu 16.04 | DigitalOcean.” 5 Common Server Setups For Your Web Application | DigitalOcean, DigitalOcean, 7 Mar. 2018, www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04.
+[1] Bearnes, Brennen. “How To Install Node.js on Ubuntu 16.04 DigitalOcean.” 5 Common Server Setups For Your Web Application DigitalOcean, DigitalOcean, 7 Mar. 2018, www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04.
 
 [2] Creationix. “Creationix/Nvm.” GitHub, github.com/creationix/nvm.
 
