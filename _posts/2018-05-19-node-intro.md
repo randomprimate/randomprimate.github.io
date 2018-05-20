@@ -171,7 +171,7 @@ To install dependencies we can either add them directly to the `package.json` fi
 or we can use the CLI:
 
 * **dependecies**: `npm install <package_name> --save`
-* **devDependencies**: `npm install <package_name> --save`
+* **devDependencies**: `npm install <package_name> --save-dev`
 
 Now to install the dependencies for a new project just run `npm install`.
 
