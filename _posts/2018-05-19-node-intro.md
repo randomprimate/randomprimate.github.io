@@ -37,7 +37,7 @@ For any hiccup during installation think about dependencies first, look up your 
 
 ## Node CLI
 
-Usage: `node \[options\] \[v8 options\] \[script.js | -e "script"\] \[arguments\]`
+Usage: `node [options] [v8 options] [script.js | -e "script"] [arguments]`
 
 To execute a js script use: `node <script-name>`
 
