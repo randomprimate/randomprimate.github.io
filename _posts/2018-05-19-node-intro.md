@@ -41,7 +41,7 @@ Usage: `node [options] [v8 options] [script.js | -e "script"] [arguments]`
 
 To execute a js script use: `node <script-name>`
 
-You can also run the debugger with `node --inspect <script-name>`. This allows us to add the `debugger` in the script to add a breaking point into a running session. To actually activate this tho we need to open dev tools at:
+You can also run the debugger with `node --inspect <script-name>`. This allows us to add `debugger` in our script which will add a breaking point into a running session. To actually activate this tho we need to open dev tools at:
 
     chrome-devtools://devtools/bundled/inspector.html?experiments=true&v8only=true&ws=127.0.0.1:9229/5e2abd65-4ce1-4fda-b9b7-c3cc7f04df67
 
@@ -174,6 +174,17 @@ or we can use the CLI:
 * **devDependencies**: `npm install <package_name> --save-dev`
 
 Now to install the dependencies for a new project just run `npm install`.
+
+## Final Thoughts
+
+With this info you should be better equipped to either build with Node.js or
+use some of the awesome tools which are available to you. Here are a few links
+to some projects I recommend looking into:
+- For web development try [Sails.js](https://sailsjs.com/)
+- Another popular framework is [Mean.js](http://mean.io/)
+- Hardware, robotics and IoT are available through [Johnny5](http://johnny-five.io/)
+- Web sockets for real time data is accessible through [Socket.io](https://socket.io/)
+
 
 ## Reference
 
